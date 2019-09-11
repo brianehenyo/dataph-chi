@@ -76,7 +76,7 @@
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
 % so you remain anonymous.
-\def\plaintitle{Data Philippines}
+\def\plaintitle{Exploring the Potential of Open Data Portals to Address the Information Needs of Lay Citizens}
 \def\plainauthor{First Author, Second Author, Third Author,
   Fourth Author, Fifth Author, Sixth Author}
 \def\emptyauthor{}
@@ -152,7 +152,7 @@
 \maketitle
 
 \begin{abstract}
-As citizens clamor for transparency and accountability from their national governments, we can see a steady increase in published open government data. Despite this increase, the Philippine government is far from achieving universal participation from its citizens since some form of data literacy is necessary to understand the underlying information from data. This study aims to understand the information seeking and sensemaking behavior of ordinary citizens to evaluate the effectivity of available open government data portals in increasing citizen engagement. We conducted a survey to gauge the awareness of the citizens and an experiment to determine the information seeking behavior of ordinary citizens. \textit{[Results]} \textit{[Contribution]}
+Open government data allows for transparency from governments and access to data collected about its citizens. However, we are still far from achieving universal participation because data literacy and experience are necessary to extract insights from data. There is also no guarantee if available data can address people’s information needs. We explored the potential of open government data portals in addressing the information needs of lay citizens through an online survey and found that these can only be partially answered by the available data. We then conducted usability tests of the open data portals to understand their information seeking behavior, and semi-structured interviews to identify gaps in the design. We found that search engines are the preferred tool for seeking information and that citizens prefer visualized and processed data over raw data, which these portals lack. We conclude with design guidelines for open data portals catered to lay citizens.
 \end{abstract}
 
 
@@ -194,15 +194,16 @@ The term "\textit{open government}" was first used in the 1950s and was generall
 
 By definition, \textit{open data} should be free to use, share, modify and analyze in machine-readable formats by anyone, but most especially the country's citizens \cite{corrales2019knowledge, DAWES201615}. Open data is perceived to be a useful tool for citizens to demand a more open and collaborative government \cite{warwick2017}. However, despite the initiative of the United Nations to provide guidelines for transparency and citizen engagement \cite{UN2013}, a gap still exists in utilizing OGD for such. It has been argued that most OGD users are technically skilled in analyzing data in its raw formats \cite{DAWES201615}. 
 
-Open Data Philippines (ODPH)\footnote{\url{https://data.gov.ph/}} was launched in January 2014 in fulfilment to the commitments of the Philippines to provide open data \cite{ODPH2015}. Despite the extensive usage of civil society organizations and the private sector, OGD in the Philippines still suffers from low utilization which suggests a disconnect between the published data and the information needs of the citizens \cite{galindesZaplan2018}. 
+Unlike the open data movement, lobbyists of freedom of information (FOI) seeks for governments to establish constitutional guarantees for a "right-to-know" process. In the absence of publicly available government data, a passed FOI law ensures a data requester that they will get a response within a specified number of days. However, it is still the discretion of the government agency whether they will provide the data or not. 
+
+Open Data Philippines (ODPH)\footnote{\url{https://data.gov.ph/}} was launched in January 2014 in fulfilment to the commitments of the Philippines to provide open data \cite{ODPH2015}. Despite the extensive usage of civil society organizations and the private sector, OGD in the Philippines still suffers from low utilization which suggests a disconnect between the published data and the information needs of the citizens \cite{galindesZaplan2018}. In 2016, an executive order from the President of the Philippines, Rodrigo Duterte, made the executive branch of the government comply with the people's rights to information \cite{duterte2016}. With this, the Electonic Freedom of Information (eFOI) portal\footnote{\url{https://foi.gov.ph}} was launched on November 2016 \cite{cigaral2016}. However, an FOI bill has yet to be passed into law. 
 
 In governments that have embraced the benefits of OGD, there have been numerous data exploration applications developed through the years. In New York City, the Department of City Planning have different supplementary planning tools that utilize the data that the city has\footnote{\url{https://labs.planning.nyc.gov/projects/}}. In the UK, an open source web tool called Data:In Place\footnote{\url{https://data-in.place/}} was developed to help citizens utilize and understand open government data \cite{puussaar2018making}. Even in other developing countries around the globe, various case studies have been conducted to showcase the potential of open data in these countries \cite{farahi2018}. Although the impact was not quantified, it is suggested that further research may be done to evaluate the effects of OGD in developing countries \cite{farahi2018}.
 
 These tools are examples of what can be done to bridge the gap in citizen engagement with OGD. However, it is necessary first to understand how ordinary citizens interact with data. Given the opportunity for human-computer interaction (HCI) to contribute to this, specifically in the context of a developing country like the Philippines, we are hoping to answer the following research questions:
 \begin{itemize}
-    \item RQ1: Do open government data portals support t
-    \item RQ2: What aspects of the government are the citizens interested in?
-    \item RQ3: Where and how do citizens look for information about the government?
+    \item RQ1: Do existing open government data portals support the information needs of the citizens? Why or why not?
+    \item RQ2: Where and how do citizens look for information about the government?
     \item RQ4: How effective are Open Data Philippines and Freedom of Information portals in supporting the information seeking and sensemaking needs of the citizens?
 \end{itemize}
 
@@ -253,60 +254,136 @@ We conducted a climate survey to gauge the awareness and the interest of Filipin
 
 \section{Climate Survey and Portal Analysis}
 % rationale for conducting this first study
+We conducted a climate survey to gauge the awareness and the interest of Filipinos about the open government initiatives of the country, specifically ODPH and eFOI. We also conducted an inventory analysis of the available data in ODPH. The survey was released in July 2019 through Google Forms. Participant consent was acquired prior to proceeding with the questionnaire as per institutional ethical research requirements.
+
+\subsection{Survey Design}
+We designed our survey to be as extensive as possible in understanding the factors that could potentially drive the awareness of Filipinos about open government initiatives. Prior to asking about their awareness of ODPH and eFOI, we asked them to provide a background of their data work experience and their information source preference.
+
+For data analysis experience, we asked our participants where they had used data before. Choices provided were for their main occupation, as a paid part-time job, as a hobby, as a passion or advocacy, for curiosity, and a final option of any other type of work. Based on a previous study, most data analysis work done are descriptive and exploratory and less inferential and predictive\cite{choi2017characteristics}. Using this information, we also asked how often they performed descriptive, diagnostic,  prescriptive, and predictive analyses with their data for each type of data work they did.
+
+Seeking to understand the information seeking behavior of Filipinos, we provided three scenarios with different degrees of personal involvement in decision making. Table \ref{tab:scenarios} lists the specific scenario we provided in the survey. The personal scenario involves making a decision involving oneself. The extrapersonal scenarios may affect the individual to some extent but is more focused on another person. Lastly, the impersonal scenario involves looking for information that is more detached from the personal lives. We asked them which information sources they would most likely consult in making the decision.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|p{5.5cm}|}
+         \hline
+         \textbf{Level} & \textbf{Scenario}  \\
+         \hline
+         Personal &  Suppose you want to live in a new apartment in Makati City, and you want to know how safe the area is before making a decision.\\
+         \hline
+         Extrapersonal & Suppose you or your child wants to study in a state university within Metro Manila. Before making a decision, you want to know which state university has an acceptable faculty/student ratio.\\
+         \hline
+         Impersonal & Suppose you want to know where most Philippine presidents go for their foreign trips.\\
+         \hline
+    \end{tabular}
+    \caption{Information seeking scenarios}
+    \label{tab:scenarios}
+\end{table}
+
+Finally, we provided a brief description of ODPH and eFOI prior to asking if they have ever heard or used these two portals. We used a 5-point Likert scale to measure the frequency and usefulness of the portals for those who have at least visited or utilized them. In the end, we asked them to provide their top three sectors of government they would be most interested in to help us determine whether the interests of the citizens align with what is provided by the government.
 
 \subsection{Participants}
-The main purpose of our survey was to get a wide range of responses to have an idea of the awareness and the interest of Filipino citizens about open government data. With this, our only requirement for our respondents was to be a Filipino citizen. We utilized snowball sampling by distributing the survey through various social media platforms across different interest groups to further our reach. We also created a Tagalog version of the survey to serve the non-English speaking citizens of the country. We were able to collect a total of 121 responses, 6 from the Tagalog survey. "We tried to include various domains and professional backgrounds to gain a broad overview and avoid unintended biases."
+The only requirement to participate in our survey was to be a Filipino citizen. We utilized snowball sampling by distributing the survey through Facebook, Twitter and different Facebook Groups to further our reach. We also made a Tagalog version of the survey to serve the non-English speaking citizens of the country. We were able to collect a total of 120 valid responses from both forms with 6 of which coming from the Tagalog survey.
 
+More than half (N=64) of our respondents were women. The average age was 33 (SD=13.94). Majority were students (N=30) followed by professionals in Information Technology (N=21) and Business Consulting and Management (N=15). However, we were able to get respondents from different sectors as to gain varied insights. Because of this, more than half (N=69) responded having done data work as part of their main occupation in the past 12 months. Some respondents (N=54) even reported doing data work in more than one of the categories provided.
+
+\subsection{Portal Analysis}
+% Pao is writing here. How the Data Inventory was created.
+We created our data inventory based on the number of available datasets 
 
 \begin{comment}
 \textbf{Survey demographics}
-Woman                60 
-Man                  52
+
+data_work_ind_occupation    69
+data_work_ind_parttime      12
+data_work_ind_hobby         34
+data_work_ind_passion       22
+data_work_ind_curiosity     31
+data_work_ind_other         25
+
+1    39
+0    27
+2    24
+3    21
+4     4
+5     3
+6     2
+
+student                               30
+information-technology                21
+business-consulting-and-management    15
+others-generic                         9
+accountancy-banking-and-finance        7
+retired                                5
+marketing-advertising-and-pr           4
+creative-arts-and-design               4
+engineering-and-manufacturing          3
+healthcare                             3
+public-services-and-administration     3
+transport-and-logistics                2
+charity-and-voluntary-work             2
+property-and-construction              1
+law-sector                             1
+retail                                 1
+teacher-training-and-education         1
+sales                                  1
+
+Woman                64
+Man                  54
 Prefer not to say     2
 
-Woman                0.526316
-Man                  0.456140
-Prefer not to say    0.017544
+Woman                0.533333
+Man                  0.450000
+Prefer not to say    0.016667
 
 < 20     7
-20s     54
-30s     28
+20s     55
+30s     29
 40s      7
-50s      8
-60+     10
+50s     11
+60+     11
 
-< 20    0.061404
-20s     0.473684
-30s     0.245614
-40s     0.061404
-50s     0.070175
-60+     0.087719
-
-Average age: 32.93859649122807, median: 29.0
-min       18.000000
-25\%       22.250000
-50\%       29.000000
-75\%       37.000000
-max       67.000000
+< 20    0.058333
+20s     0.458333
+30s     0.241667
+40s     0.058333
+50s     0.091667
+60+     0.091667
 
 87 have done some sort of data work (76.32\%)
 \end{comment}
 
-\subsection{Methods}
-The survey had five sections namely, (1) demographic information, (2) background on data work, (3) information seeking sources, (4) awareness of Open Data Philippines and Freedom of Information portals and (5) interest in government data. We asked respondents to provide their age, gender, educational level, income level and current occupation so that we can associate these socio-economic features to their level of awareness and interest in open government data.
-
-For their experience on data work, we specifically asked if they have done any form of data analysis (1) for their main occupation, (2) as a paid part-time job, (3) as a hobby, (4) as a passion or advocacy, (5) for curiosity, and (6) any other type of work. (Reference p835-choi here) We also asked the type of data analysis work they performed for each to understand the depth of data analysis done.
-
-To get a high level understanding of the information seeking behavior of Filipino citizens, we provided specific scenarios and common sources of information and asked them how likely they would use those sources to make a decision in that scenario. 
-
-For the awareness on Open Data Philippines and Freedom of Information portals, we provided the following choices, (1) I did not know about this, (2) I have heard about it, (3) I am aware and have visited (4) I am fully aware and have used or requested datasets. 
-
-At the very end, we also inquired what specific aspect of government data they were interested in to evaluate the availability of data according to the priorities of the respondents. (This is because this study serves as a formative study for the development of an online visualization platform to showcase the open government data to the public.)
-
 \subsection{Results}
+% Kyle will write the results of the survey
+To answer RQ1,
+
+
+% Data portal analysis
+% 
 
 
 \section{Usability Experiment}
+To further examine the information seeking behavior of lay citizens, we conducted usability tests of ODPH and eFOI. It was done in parallel with semi-structured interviews to identify gaps in the design of the portals. The interviews were conducted between July and August 2019 at locations convenient to the participants. Participant consent was obtained prior to conducting the interview. Dialogues were audio recorded while the on-screen behavior was recorded using a screen capture software. 
+
+\subsection{Participants}
+Par
+
+We conducted interviews with a different sample of people to understand better the information seeking and sensemaking behaviors of ordinary citizens. Each participant was asked to perform the same number of search tasks. There were three parts with two tasks per part. Table \ref{tab:searchtasks} shows the specific questions that were asked. 
+
+\subsection{Experiment Setup}
+In the open search, participants were allowed to use their preferred search engine, while in the other two parts, they were restricted to search only within the mentioned portal. Tasks were designed based on the assumption that the information is available in either a dataset from Open Data Philippines or a request in the Freedom of Information portal. The logic behind identifying the participant's place of residence as part of the personal task is based on previous studies that show people associate better with data when it is linked to a place (Cite Data:In Place).
+
+All participants were timed for each task to quantify how long it took for them to complete the task. Each participant was given a 15-minute time limit to complete each task due to the constraint of the screen recording software used. They were also given the option to give up at any point. After each task, participants were asked about their experience and their thought process of how they approached the problem.
+
+We also provided the participants six different datasets downloaded from the two government portals for them to rank their usability and provide the basis for their ranking. The goal of this task is to understand the thought process of ordinary citizens and the factors they consider when presented with raw datasets instead of organized information. 
+
+Participants were also asked about their experience with data analysis to allow for comparison between a lay person and a data worker. To be considered a lay person, the participant needed to (1) have less than a year of experience of data analysis and (2) never utilized open government data portals for any kind of work; otherwise, they would be categorized as a data worker. Due to constraints, our participants were selected out of convenience. We were able to successfully recruit 13 lay people and 8 data workers for our interview.
+
+\subsection{Issues  Encountered}
+
+
+\subsection{Data Analysis}
+- Describe coding methods here
 
 \begin{comment}
 Age:
@@ -379,16 +456,6 @@ Super Layperson	2.0	51.500000	10.606602	44.0	47.75	51.5	55.25	59.0
   \caption{List of search tasks performed by the participants per portal.}~\label{tab:searchtasks}
 \end{table*}
 
-We conducted interviews with a different sample of people to understand better the information seeking and sensemaking behaviors of ordinary citizens. Each participant was asked to perform the same number of search tasks. There were three parts with two tasks per part. Table \ref{tab:searchtasks} shows the specific questions that were asked. 
-
-In the open search, participants were allowed to use their preferred search engine, while in the other two parts, they were restricted to search only within the mentioned portal. Tasks were designed based on the assumption that the information is available in either a dataset from Open Data Philippines or a request in the Freedom of Information portal. The logic behind identifying the participant's place of residence as part of the personal task is based on previous studies that show people associate better with data when it is linked to a place (Cite Data:In Place).
-
-All participants were timed for each task to quantify how long it took for them to complete the task. Each participant was given a 15-minute time limit to complete each task due to the constraint of the screen recording software used. They were also given the option to give up at any point. After each task, participants were asked about their experience and their thought process of how they approached the problem.
-
-We also provided the participants six different datasets downloaded from the two government portals for them to rank their usability and provide the basis for their ranking. The goal of this task is to understand the thought process of ordinary citizens and the factors they consider when presented with raw datasets instead of organized information. 
-
-Participants were also asked about their experience with data analysis to allow for comparison between a lay person and a data worker. To be considered a lay person, the participant needed to (1) have less than a year of experience of data analysis and (2) never utilized open government data portals for any kind of work; otherwise, they would be categorized as a data worker. Due to constraints, our participants were selected out of convenience. We were able to successfully recruit 13 lay people and 8 data workers for our interview.
-
 \subsection{Data Analysis}
 Inductive coding - Exploratory in nature
 \url{https://medium.com/@projectux/themes-dont-just-emerge-coding-the-qualitative-data-95aff874fdce}
@@ -409,49 +476,6 @@ Lastly, to evaluate the efficacy of the Open Data Philippines and Freedom of Inf
 
 \textit{Where do the speed of finding the responses come in?}
 
-
-\section{Results}
-
-Issue encountered with interview:
-- 2 interviewees: first time to use a computer/unfamiliar with searching
-
-\subsection{RQ1: How aware are citizens about open government data and Freedom of Information in the Philippines?}
-
-I did not know about this.                      51
-I have heard about it.                          39
-I am fully aware and have used its datasets.    12
-I am aware and have visited it.                 12
-
-I did not know about this.                      0.447368
-I have heard about it.                          0.342105
-I am fully aware and have used its datasets.    0.105263
-I am aware and have visited it.                 0.105263
-
-I did not know about this.                      61
-I have heard about it.                          31
-I am aware and have visited it.                 11
-I am fully aware and have requested from it.    11
-
-I did not know about this.                      0.535088
-I have heard about it.                          0.271930
-I am aware and have visited it.                 0.096491
-I am fully aware and have requested from it.    0.096491
-
-\subsection{RQ2: What aspects of the government are the citizens interested in?}
-
-\textit{How to rank the categories? We have top 3. We can weight the categories according to 3, 2, 1?}
-
-\subsection{RQ3: Where and how do citizens look for information about the government?}
-
-\subsubsection{Common Sources}
-- Information seeking section of survey
-- Most common pages visited
-
-\subsubsection{Behavior of the interviewees}
-
-\subsection{RQ4: How effective are Open Data Philippines and Freedom of Information portals in supporting the information seeking and sensemaking needs of the citizens?}
-
-
 \section{Discussion}
 \begin{comment}
 From model paper:
@@ -468,296 +492,6 @@ Summary of what we did and what we found out
 Our contribution
 
 Moving forward, we would like to understand whether our design suggestions facilitate a better way to communicate open government data to the general public, even to those with minimal data literacy. 
-
-\begin{comment}
-\section{Typeset Text}
-The styles contained in this document have been modified from the
-default styles to reflect ACM formatting conventions. For example,
-content paragraphs like this one are formatted using the Normal style.
-
-\LaTeX\ sometimes will create overfull lines that extend into columns.
-To attempt to combat this, the \texttt{.cls} file has a command,
-\texttt{{\textbackslash}sloppy}, that essentially asks \LaTeX\ to
-prefer underfull lines with extra whitespace.  For more details on
-this, and info on how to control it more finely, check out
-{\url{http://www.economics.utoronto.ca/osborne/latex/PMAKEUP.HTM}}.
-
-\subsection{Title and Authors}
-
-Your paper's title, authors and affiliations should run across the
-full width of the page in a single column 17.8 cm (7 in.) wide.  The
-title should be in Helvetica or Arial 18-point bold.  Authors' names
-should be in Times New Roman or Times Roman 12-point bold, and
-affiliations in 12-point regular.  
-
-See \texttt{{\textbackslash}author} section of this template for
-instructions on how to format the authors. For more than three
-authors, you may have to place some address information in a footnote,
-or in a named section at the end of your paper. Names may optionally
-be placed in a single centered row instead of at the top of each
-column. Leave one 10-point line of white space below the last line of
-affiliations.
-
-\subsection{Abstract and Keywords}
-
-Every submission should begin with an abstract of about 150 words,
-followed by a set of Author Keywords and ACM Classification
-Keywords. The abstract and keywords should be placed in the left
-column of the first page under the left half of the title. The
-abstract should be a concise statement of the problem, approach, and
-conclusions of the work described. It should clearly state the paper's
-contribution to the field of HCI\@.
-
-\subsection{Normal or Body Text}
-
-Please use a 10-point Times New Roman or Times Roman font or, if this
-is unavailable, another proportional font with serifs, as close as
-possible in appearance to Times Roman 10-point. Other than Helvetica
-or Arial headings, please use sans-serif or non-proportional fonts
-only for special purposes, such as source code text.
-
-\subsection{First Page Copyright Notice}
-This template include a sample ACM copyright notice at the bottom of
-page 1, column 1.  Upon acceptance, you will be provided with the
-appropriate copyright statement and unique DOI string for publication.
-Accepted papers will be distributed in the conference
-publications. They will also be placed in the ACM Digital Library,
-where they will remain accessible to thousands of researchers and
-practitioners worldwide. See
-\url{http://acm.org/publications/policies/copyright_policy} for the
-ACM's copyright and permissions policy.
-
-\subsection{Subsequent Pages}
-
-On pages beyond the first, start at the top of the page and continue
-in double-column format.  The two columns on the last page should be
-of equal length.
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/sigchi-logo}
-  \caption{Insert a caption below each figure. Do not alter the
-    Caption style.  One-line captions should be centered; multi-line
-    should be justified. }~\label{fig:figure1}
-\end{figure}
-
-\subsection{References and Citations}
-
-Use a numbered list of references at the end of the article, ordered
-alphabetically by last name of first author, and referenced by numbers
-in
-brackets~\cite{acm_categories,ethics,Klemmer:2002:WSC:503376.503378}.
-Your references should be published materials accessible to the
-public. Internal technical reports may be cited only if they are
-easily accessible (i.e., you provide the address for obtaining the
-report within your citation) and may be obtained by any reader for a
-nominal fee. Proprietary information may not be cited. Private
-communications should be acknowledged in the main text, not referenced
-(e.g., ``[Borriello, personal communication]'').
-
-References should be in ACM citation format:
-\url{http://acm.org/publications/submissions/latex_style}. This
-includes citations to internet
-resources~\cite{acm_categories,cavender:writing,CHINOSAUR:venue,psy:gangnam}
-according to ACM format, although it is often appropriate to include
-URLs directly in the text, as above.
-
-
-% Use a numbered list of references at the end of the article, ordered
-% alphabetically by first author, and referenced by numbers in
-% brackets~\cite{ethics, Klemmer:2002:WSC:503376.503378,
-%   Mather:2000:MUT, Zellweger:2001:FAO:504216.504224}. For papers from
-% conference proceedings, include the title of the paper and an
-% abbreviated name of the conference (e.g., for Interact 2003
-% proceedings, use \textit{Proc. Interact 2003}). Do not include the
-% location of the conference or the exact date; do include the page
-% numbers if available. See the examples of citations at the end of this
-% document. Within this template file, use the \texttt{References} style
-% for the text of your citation.
-
-% Your references should be published materials accessible to the
-% public.  Internal technical reports may be cited only if they are
-% easily accessible (i.e., you provide the address for obtaining the
-% report within your citation) and may be obtained by any reader for a
-% nominal fee.  Proprietary information may not be cited. Private
-% communications should be acknowledged in the main text, not referenced
-% (e.g., ``[Robertson, personal communication]'').
-
-\begin{table}
-  \centering
-  \begin{tabular}{l r r r}
-    % \toprule
-    & & \multicolumn{2}{c}{\small{\textbf{Test Conditions}}} \\
-    \cmidrule(r){3-4}
-    {\small\textit{Name}}
-    & {\small \textit{First}}
-      & {\small \textit{Second}}
-    & {\small \textit{Final}} \\
-    \midrule
-    Marsden & 223.0 & 44 & 432,321 \\
-    Nass & 22.2 & 16 & 234,333 \\
-    Borriello & 22.9 & 11 & 93,123 \\
-    Karat & 34.9 & 2200 & 103,322 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{Table captions should be placed below the table. We
-    recommend table lines be 1 point, 25\% black. Minimize use of
-    table grid lines.}~\label{tab:table1}
-\end{table}
-
-\section{Sections}
-
-The heading of a section should be in Helvetica or Arial 9-point bold,
-all in capitals. Sections should \textit{not} be numbered.
-
-\subsection{Subsections}
-
-Headings of subsections should be in Helvetica or Arial 9-point bold
-with initial letters capitalized.  For sub-sections and
-sub-subsections, a word like \emph{the} or \emph{of} is not
-capitalized unless it is the first word of the heading.
-
-\subsubsection{Sub-subsections}
-
-Headings for sub-subsections should be in Helvetica or Arial 9-point
-italic with initial letters capitalized.  Standard
-\texttt{{\textbackslash}section}, \texttt{{\textbackslash}subsection},
-and \texttt{{\textbackslash}subsubsection} commands will work fine in
-this template.
-
-\section{Figures/Captions}
-
-Place figures and tables at the top or bottom of the appropriate
-column or columns, on the same page as the relevant text (see
-Figure~\ref{fig:figure1}). A figure or table may extend across both
-columns to a maximum width of 17.78 cm (7 in.).
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=1.75\columnwidth]{figures/map}
-  \caption{In this image, the map maximizes use of space. You can make
-    figures as wide as you need, up to a maximum of the full width of
-    both columns. Note that \LaTeX\ tends to render large figures on a
-    dedicated page. Image: \ccbynd~ayman on
-    Flickr.}~\label{fig:figure2}
-\end{figure*}
-
-Captions should be Times New Roman or Times Roman 9-point bold.  They
-should be numbered (e.g., ``Table~\ref{tab:table1}'' or
-``Figure~\ref{fig:figure1}''), centered (if one line) otherwise justified, and placed beneath the figure
-or table.  Please note that the words ``Figure'' and ``Table'' should
-be spelled out (e.g., ``Figure'' rather than ``Fig.'') wherever they
-occur. Figures, like Figure~\ref{fig:figure2}, may span columns and
-all figures should also include alt text for improved accessibility.
-Papers and notes may use color figures, which are included in the page
-limit; the figures must be usable when printed in black-and-white in
-the proceedings.
-
-The paper may be accompanied by a short video figure (we recommend staying within five
-minutes in length). However, the paper should stand on its own without
-the video figure, as the video may not be available to everyone who
-reads the paper.  
-
-\subsection{Inserting Images}
-When possible, include a vector formatted graphic (i.e. PDF or EPS).
-When including bitmaps,  use an image editing tool to resize the image
-at the appropriate printing resolution (usually 300 dpi).
-
-\section{Quotations}
-Quotations may be italicized when \textit{``placed inline''}.
-
-\begin{quote}
-Longer quotes, when placed in their own paragraph, need not be
-italicized or in quotation marks when indented.  
-\end{quote}
-
-\section{Language, Style, and Content}
-
-The written and spoken language of SIGCHI is English. Spelling and
-punctuation may use any dialect of English (e.g., British, Canadian,
-US, etc.) provided this is done consis- tently. Hyphenation is
-optional. To ensure suitability for an international audience, please
-pay attention to the following:
-
-\begin{itemize}
-\item Write in a straightforward style.
-\item Try to avoid long or complex sentence structures.
-\item Use common and basic vocabulary (e.g., use the word ``unusual'' rather than the word ``arcane''.
-\item Briefly define or explain all technical terms that may be
-  unfamiliar to readers.
-\item Explain all acronyms the first time they are used in your
-  text---e.g., ``Digital Signal Processing (DSP)''.
-\item Explain local references (e.g., not everyone knows all city
-  names in a particular country).
-\item Explain ``insider'' comments. Ensure that your whole audience
-  understands any reference whose meaning you do not describe (e.g.,
-  do not assume that everyone has used a Macintosh or a particular
-  application).
-\item Explain colloquial language and puns. Understanding phrases like
-  ``red herring'' may require a local knowledge of English.  Humor and
-  irony are difficult to translate.
-\item Use unambiguous forms for culturally localized concepts, such as
-  times, dates, currencies, and numbers (e.g., ``1--5--97'' or
-  ``5/1/97'' may mean 5 January or 1 May, and ``seven o'clock'' may
-  mean 7:00 am or 19:00). For currencies, indicate equivalences:
-  ``Participants were paid {\fontfamily{txr}\selectfont \textwon}
-  25,000, or roughly US \$22.''
-\item Be careful with the use of gender-specific pronouns (he, she)
-  and other gendered words (chairman, manpower, man-months). Use
-  inclusive language that is gender-neutral (e.g., she or he, they,
-  s/he, chair, staff, staff-hours, person-years). See the
-  \textit{Guidelines for Bias-Free Writing} for further advice and
-  examples regarding gender and other personal
-  attributes~\cite{Schwartz:1995:GBF}. Be particularly aware of
-  considerations around writing about people with disabilities.
-\item If possible, use the full (extended) alphabetic character set
-  for names of persons, institutions, and places (e.g.,
-  Gr{\o}nb{\ae}k, Lafreni\'ere, S\'anchez, Nguy{\~{\^{e}}}n,
-  Universit{\"a}t, Wei{\ss}enbach, Z{\"u}llighoven, \r{A}rhus, etc.).
-  These characters are already included in most versions and variants
-  of Times, Helvetica, and Arial fonts.
-\end{itemize}
-
-\section{Accessibility}
-The Executive Council of SIGCHI has committed to making SIGCHI
-conferences more inclusive for researchers, practitioners, and
-educators with disabilities. As a part of this goal, the all authors
-are asked to work on improving the accessibility of their
-submissions. Specifically, we encourage authors to carry out the
-following five steps:
-\begin{enumerate}
-\item Add alternative text to all figures
-\item Mark table headings
-\item Add tags to the PDF
-\item Verify the default language
-\item Set the tab order to ``Use Document Structure''
-\end{enumerate}
-For more information and links to instructions and resources, please
-see: \url{http://chi2016.acm.org/accessibility}.  The
-\texttt{{\textbackslash}hyperref} package allows you to create well tagged PDF files,
-please see the preamble of this template for an example.
-
-\section{Page Numbering, Headers and Footers}
-Your final submission should not contain footer or header information
-at the top or bottom of each page. Specifically, your final submission
-should not include page numbers. Initial submissions may include page
-numbers, but these must be removed for camera-ready. Page numbers will
-be added to the PDF when the proceedings are assembled.
-
-\section{Producing and Testing PDF Files}
-
-We recommend that you produce a PDF version of your submission well
-before the final deadline.  Your PDF file must be ACM DL
-Compliant. The requirements for an ACM Compliant PDF are available at:
-{\url{http://www.scomminc.com/pp/acmsig/ACM-DL-pdfs-requirements.htm}}.
-
-Test your PDF file by viewing or printing it with the same software we
-will use when we receive it, Adobe Acrobat Reader Version 10. This is
-widely available at no cost. Note that most
-reviewers will use a North American/European version of Acrobat
-reader, so please check your PDF accordingly.
-\end{comment}
-
 
 \section{Acknowledgments}
 
